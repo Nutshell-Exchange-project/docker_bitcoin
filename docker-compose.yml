@@ -11,13 +11,13 @@ services:
       - "18333:18333"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - /opt/btc_data:/bitcoin
+      - /opt/btc_data:/bitcoin/data
     command:
 #      - "-printtoconsole"
        - "-regtest=0"
        - "-rest"
-       - "-rpcallowip=10.10.50.5/32"
-       - "-rpcpassword=foo"
+       - "-rpcallowip=0/32"
+       - "-rpcpassword=test"
        - "-wallet=wallet1"
        - "-rpcport=8333"
        - "-rpcuser=foo"
